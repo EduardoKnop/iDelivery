@@ -17,10 +17,15 @@ struct StoresContainerView: View {
             
             LazyVStack(alignment: .leading, spacing: 20) {
                 ForEach(storesMock) { store in
-                    StoreItemView(item: store)
+                    NavigationLink {
+                        StoreDetailView(store: store)
+                    } label: {
+                        StoreItemView(item: store)
+                    }
                 }
             }
         }
+        .foregroundStyle(Color.black)
         .padding(20)
     }
 }
