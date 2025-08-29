@@ -10,7 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            Text("Hello, world!")
+            NavigationBar()
+                .padding(.horizontal, 15)
+            ScrollView(.vertical, showsIndicators: true) {
+                VStack {
+                    OrderTypeGridView()
+                }
+            }
         }
     }
 }
