@@ -16,3 +16,17 @@ let ordersMock: [OrderType] = [
     OrderType(id: 6, name: "Beverages", image: "beverages"),
     OrderType(id: 7, name: "Gourmet", image: "gourmet"),
 ]
+
+let carouselMock: [OrderType] = [
+    OrderType(id: 1, name: "Barbecue", image: "barbecue-banner"),
+    OrderType(id: 2, name: "Brazilian", image: "brazilian-meal-banner"),
+    OrderType(id: 3, name: "Pokes", image: "pokes-banner"),
+]
+
+let storesMock: [OrderType] = [
+    OrderType(id: 1, name: "Monstro Burger", image: "monstro-burger-logo"),
+    OrderType(id: 2, name: "Food Court", image: "food-court-logo"),
+    OrderType(id: 3, name: "Carbrón", image: "carbron-logo"),
+    OrderType(id: 4, name: "Bakery Store", image: "bakery-logo"),
+    OrderType(id: 5, name: "Açaí Panda", image: "acai-panda-logo"),
+]

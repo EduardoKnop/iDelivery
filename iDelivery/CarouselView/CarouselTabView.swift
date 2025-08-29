@@ -8,15 +8,9 @@
 import SwiftUI
 
 struct CarouselTabView: View {
-    let ordersMock: [OrderType] = [
-        OrderType(id: 1, name: "Barbecue", image: "barbecue-banner"),
-        OrderType(id: 2, name: "Brazilian", image: "brazilian-meal-banner"),
-        OrderType(id: 3, name: "Pokes", image: "pokes-banner"),
-    ]
-    
     var body: some View {
         TabView {
-            ForEach(ordersMock) { order in
+            ForEach(carouselMock) { order in
                 CarouselItemView(order: order)
             }
         }
