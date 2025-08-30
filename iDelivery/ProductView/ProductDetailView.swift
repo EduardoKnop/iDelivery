@@ -13,60 +13,9 @@ struct ProductDetailView: View {
     
     var body: some View {
         VStack {
-            VStack(alignment: .leading, spacing: 16) {
-                Image(product.image)
-                    .resizable()
-                    .scaledToFit()
-                    .shadow(radius: 20)
-                
-                Text(product.name)
-                    .font(.title)
-                    .bold()
-                    .padding(.horizontal)
-                
-                Text(product.description)
-                    .padding(.horizontal)
-                
-                Text(product.formattedPrice)
-                    .font(.title3)
-                    .bold()
-                    .padding(.horizontal)
-            }
-            
+            ProductDetailHeaderView(product: product)
             Spacer()
-            
-            VStack(spacing: 16) {
-                Text("Quantity")
-                    .font(.title3)
-                    .bold()
-                
-                HStack {
-                    Button {
-                        if productQuantity > 1 {
-                            productQuantity -= 1
-                        }
-                    } label: {
-                        Image(systemName: "minus.circle.fill")
-                            .font(.title)
-                            .bold()
-                    }
-                    
-                    Text("\(productQuantity)")
-                        .font(.title2)
-                        .bold()
-                    
-                    Button {
-                        if productQuantity < 99 {
-                            productQuantity += 1
-                        }
-                    } label: {
-                        Image(systemName: "plus.circle.fill")
-                            .font(.title)
-                            .bold()
-                    }
-                }
-            }
-            
+            ProductQuantityView(productQuantity: $productQuantity)
             Spacer()
             
             Button {
