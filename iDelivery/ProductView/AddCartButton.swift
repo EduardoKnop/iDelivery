@@ -9,10 +9,21 @@ import SwiftUI
 
 struct AddCartButton: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Image(systemName: "cart")
+            Text("Add to Cart")
+        }
+        .padding(.horizontal, 32)
+        .padding(.vertical, 16)
+        .font(.title3)
+        .bold()
+        .background(Color.colorRed)
+        .foregroundStyle(.white)
+        .cornerRadius(32)
+        .shadow(color: Color.colorRedDark.opacity(0.5), radius: 10, x: 6, y: 8)
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     AddCartButton()
 }

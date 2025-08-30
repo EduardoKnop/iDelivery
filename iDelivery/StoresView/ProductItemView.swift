@@ -18,6 +18,7 @@ struct ProductItemView: View {
                 
                 Text(product.description)
                     .foregroundStyle(.black.opacity(0.5))
+                    .multilineTextAlignment(.leading)
                 
                 Text(product.formattedPrice)
             }
@@ -32,6 +33,7 @@ struct ProductItemView: View {
                 .shadow(color: .black.opacity(0.3), radius: 20, x: 6, y: 8)
         }
         .padding()
+        .foregroundStyle(.black)
     }
 }
 
